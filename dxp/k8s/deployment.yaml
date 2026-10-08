@@ -25,7 +25,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: atlas-avis-web
-        image: harbor.dxp/dxp/atlas-avis-web:latest
+        image: harbor.harbor.svc.cluster.local/dxp/atlas-avis-web:af5f98c
         imagePullPolicy: Always
         envFrom:
         # S105 -- token renomme (etait PLACEHOLDER_DB_SECRET, majuscules
