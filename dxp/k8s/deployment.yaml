@@ -36,6 +36,11 @@ spec:
         - secretRef:
             name: placeholder-db-secret
             optional: true
+        # S114 (L0a, #151) -- renseignee par la plateforme (service-ref browser),
+        # vide si aucun backend n'est lie. Lue au demarrage par docker/40-dxp-config.sh.
+        env:
+        - name: VITE_API_URL
+          value: ""
         ports:
         - containerPort: 80
         resources:

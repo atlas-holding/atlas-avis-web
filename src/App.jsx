@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
 // atlas-avis-web -- Frontend web (Golden Path React)
-// VITE_API_URL est injecte au build par DxP (service-ref "browser" vers atlas-avis-bff).
-const API = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+// VITE_API_URL est lu a l'execution dans config.js, ecrit au demarrage du
+// conteneur par DxP (service-ref "browser" vers atlas-avis-bff).
+const API = ((window.__DXP_CONFIG__ && window.__DXP_CONFIG__.VITE_API_URL) || '').replace(/\/$/, '');
 
 const SENT = {
   positif: { bg: '#e7f6ec', fg: '#127a3d', label: 'Positif' },
