@@ -10,3 +10,4 @@
 ```bash
 npm install && npm run dev
 ```
+Run de verification S123c.
